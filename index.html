@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Simple DNSCrypt by bitbeans</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Simple DNSCrypt</h1>
+        <p>A simple management tool for dnscrypt-proxy</p>
+
+        <p class="view"><a href="https://github.com/bitbeans/SimpleDnsCrypt">View the Project on GitHub <small>bitbeans/SimpleDnsCrypt</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/bitbeans/SimpleDnsCrypt/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/bitbeans/SimpleDnsCrypt/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/bitbeans/SimpleDnsCrypt">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="simple-dnscrypt" class="anchor" href="#simple-dnscrypt" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simple DNSCrypt</h1>
+
+<p>Simple DNSCrypt is a simple management tool to configure dnscrypt-proxy on windows based systems.</p>
+
+<p>If you are looking for an only command line tool, you can use the <a href="https://dnscrypt.org/">dnscrypt-proxy</a> software. There are pre-compiled versions for any os.
+The dnscrypt-proxy software is written and maintained by Frank Denis (<a href="https://github.com/jedisct1" class="user-mention">@jedisct1</a>).</p>
+
+<h3>
+<a id="status" class="anchor" href="#status" aria-hidden="true"><span class="octicon octicon-link"></span></a>Status</h3>
+
+<p><strong>There will be bugs. May change. May break.</strong></p>
+
+<p>Missing features:</p>
+
+<ul>
+<li>IPv6 support</li>
+<li>Secondary resolver support</li>
+</ul>
+
+<h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h3>
+
+<p>To install Simple DNSCrypt use the <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/download/0.2.3/SimpleDNSCrypt.msi">latest MSI package</a>.
+You don`t need to download the dnscrypt-resolvers.csv or the dnscrypt-proxy package at all.
+Both are included in the msi package, the dnscrypt-resolvers.csv can be updated from inside the software (and will be verified with minisign).</p>
+
+<h4>
+<a id="file-signing" class="anchor" href="#file-signing" aria-hidden="true"><span class="octicon octicon-link"></span></a>File Signing</h4>
+
+<p>The MSI package and the SimpleDnsCrypt.exe are signed via a <em>COMODO RSA Code Signing CA</em>. 
+The files are signed under the name: <em>EAM Experience Area Münsingen GmbH</em></p>
+
+<p>You also can verify the MSI package with <a href="https://jedisct1.github.io/minisign/">minisign</a>.
+The minisign <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/download/0.2.3/SimpleDNSCrypt.msi.minisig">signature</a> can be verified with the following command:</p>
+
+<pre><code>minisign -Vm SimpleDNSCrypt.msi -P RWTSM+4BNNvkZPNkHgE88ETlhWa+0HDzU5CN8TvbyvmhVUcr6aQXfssV
+</code></pre>
+
+<h4>
+<a id="uninstall" class="anchor" href="#uninstall" aria-hidden="true"><span class="octicon octicon-link"></span></a>Uninstall</h4>
+
+<p>To uninstall Simple DNSCrypt and dnscrypt-proxy, just go to the windows Control Panel (Programs and Features) and search for Simple DNSCrypt.</p>
+
+<h3>
+<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h3>
+
+<h4>
+<a id="standard-settings" class="anchor" href="#standard-settings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Standard Settings</h4>
+
+<p><img src="https://raw.githubusercontent.com/bitbeans/SimpleDnsCrypt/master/img/standard.png" alt="beta 0.2.1"></p>
+
+<h4>
+<a id="advanced-settings" class="anchor" href="#advanced-settings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Advanced Settings</h4>
+
+<p><img src="https://raw.githubusercontent.com/bitbeans/SimpleDnsCrypt/master/img/advanced.png" alt="beta 0.2.1"></p>
+
+<h3>
+<a id="compatibility" class="anchor" href="#compatibility" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compatibility</h3>
+
+<p>This software was tested on:</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="center">32 bit</th>
+<th align="center">64 bit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Windows 7</td>
+<td align="center">untested</td>
+<td align="center">untested</td>
+</tr>
+<tr>
+<td align="left">Windows 8.1</td>
+<td align="center">untested</td>
+<td align="center">tested</td>
+</tr>
+<tr>
+<td align="left">Windows 10</td>
+<td align="center">untested</td>
+<td align="center">tested</td>
+</tr>
+</tbody>
+</table>
+
+<p>Feel free to report your success or failure: <a href="https://github.com/bitbeans/SimpleDnsCrypt/issues/5">here</a></p>
+
+<h3>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h3>
+
+<p>This software targets .NET 4.5.</p>
+
+<h3>
+<a id="translations" class="anchor" href="#translations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Translations</h3>
+
+<p>SimpleDNSCrypt currently speaks the following languages:</p>
+
+<ul>
+<li>english</li>
+<li>german</li>
+</ul>
+
+<p>If you are able to translate the the resx files into more languages, please feel free to send a pull request. </p>
+
+<h3>
+<a id="alternative-software" class="anchor" href="#alternative-software" aria-hidden="true"><span class="octicon octicon-link"></span></a>Alternative Software</h3>
+
+<p>If you don`t like this software, there are two similar projects:</p>
+
+<ul>
+<li>
+<a href="https://github.com/Noxwizard/dnscrypt-winclient">DNSCrypt WinClient</a>: the original DNSCrypt user interface for Windows.</li>
+<li>
+<a href="http://simonclausen.dk/projects/dnscrypt-winservicemgr/">DNSCrypt Windows Service Manager</a>: a full-featured DNSCrypt user interface for Windows.</li>
+</ul>
+
+<h3>
+<a id="used-software" class="anchor" href="#used-software" aria-hidden="true"><span class="octicon octicon-link"></span></a>Used Software</h3>
+
+<ul>
+<li>libsodium-net <a href="https://www.gitbook.com/book/bitbeans/libsodium-net/details">doc</a> <a href="https://github.com/adamcaudill/libsodium-net"><img class="emoji" title=":octocat:" alt=":octocat:" src="https://assets-cdn.github.com/images/icons/emoji/octocat.png" height="20" width="20" align="absmiddle"></a>
+</li>
+<li>WPF Localize Extension <a href="https://wpflocalizeextension.codeplex.com/">doc</a> <a href="https://github.com/SeriousM/WPFLocalizationExtension"><img class="emoji" title=":octocat:" alt=":octocat:" src="https://assets-cdn.github.com/images/icons/emoji/octocat.png" height="20" width="20" align="absmiddle"></a> </li>
+<li>Caliburn Micro <a href="http://caliburnmicro.com/">doc</a> <a href="https://github.com/Caliburn-Micro/Caliburn.Micro/"><img class="emoji" title=":octocat:" alt=":octocat:" src="https://assets-cdn.github.com/images/icons/emoji/octocat.png" height="20" width="20" align="absmiddle"></a> </li>
+<li>MahApps Metro <a href="http://mahapps.com/">doc</a> <a href="https://github.com/MahApps/MahApps.Metro"><img class="emoji" title=":octocat:" alt=":octocat:" src="https://assets-cdn.github.com/images/icons/emoji/octocat.png" height="20" width="20" align="absmiddle"></a> </li>
+<li>minisign-net <a href="https://github.com/bitbeans/minisign-net"><img class="emoji" title=":octocat:" alt=":octocat:" src="https://assets-cdn.github.com/images/icons/emoji/octocat.png" height="20" width="20" align="absmiddle"></a> </li>
+</ul>
+
+<h3>
+<a id="special-thanks" class="anchor" href="#special-thanks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Special Thanks</h3>
+
+<p>Frank Denis (<a href="https://github.com/jedisct1" class="user-mention">@jedisct1</a>) for developing <a href="https://github.com/jedisct1/libsodium">libsodium</a> and <a href="https://dnscrypt.org">DNSCrypt</a></p>
+
+<p>The EAM GmbH and <a href="https://bytejail.com">bytejail</a> for funding this project</p>
+
+<h3>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h3>
+
+<p><a href="https://en.wikipedia.org/wiki/MIT_License">MIT</a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/bitbeans">bitbeans</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
