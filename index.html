@@ -72,12 +72,28 @@ The minisign <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/downlo
 <h4>
 <a id="standard-settings" class="anchor" href="#standard-settings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Standard Settings</h4>
 
-<p><img src="https://raw.githubusercontent.com/bitbeans/SimpleDnsCrypt/master/img/standard.png" alt="beta 0.2.1"></p>
+<p><img src="https://raw.githubusercontent.com/bitbeans/SimpleDnsCrypt/master/img/standard.png" alt="standard view"></p>
 
 <h4>
 <a id="advanced-settings" class="anchor" href="#advanced-settings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Advanced Settings</h4>
 
-<p><img src="https://raw.githubusercontent.com/bitbeans/SimpleDnsCrypt/master/img/advanced.png" alt="beta 0.2.1"></p>
+<p><img src="https://raw.githubusercontent.com/bitbeans/SimpleDnsCrypt/master/img/advanced.png" alt="advanced view"></p>
+
+<h5><a id="plugins" class="anchor" href="#plugins" aria-hidden="true"><span class="octicon octicon-link"></span></a>Plugins</h5>
+
+<p><img src="https://raw.githubusercontent.com/bitbeans/SimpleDnsCrypt/master/img/plugins.png" alt="plugin view"></p>
+
+<p>Simple DNSCrypt currently supports two plugins:</p>
+
+<p><b>libdcplugin_ldns_aaaa_blocking</b></p>
+
+<p>If your network doesn't support IPv6, chances are that your applications are still constantly trying to resolve IPv6 addresses, causing unnecessary slowdowns.
+
+This plugin causes the proxy to immediately reply to IPv6 requests, without having to send a useless request to upstream resolvers, and having to wait for a response.</p>
+
+<p><b>libdcplugin_logging</b></p>
+
+<p>This plugin logs the DNS queries received by the proxy. The logs are stored in a local file. You can choose the folder, where dnscrypt-proxy will store the logfile (dns.log).</p>
 
 <h3>
 <a id="compatibility" class="anchor" href="#compatibility" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compatibility</h3>
