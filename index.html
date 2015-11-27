@@ -15,12 +15,12 @@
       <h1 class="project-name"><img alt="Simple DNSCrypt" src="https://raw.githubusercontent.com/bitbeans/SimpleDnsCrypt/master/img/simplednscrypt_256.png"/></h1>
       <h2 class="project-name">Simple DNSCrypt</h2>
       <h3 class="project-tagline">A simple management tool for dnscrypt-proxy</h3>
-      <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/download/0.2.7/SimpleDNSCrypt.msi" class="btn">Download .msi (Installer)</a>
+      <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/download/0.2.8/SimpleDNSCrypt.msi" class="btn">Download .msi (Installer)</a>
       <a href="https://github.com/bitbeans/SimpleDnsCrypt" class="btn">View on GitHub</a>
       <a href="https://github.com/bitbeans/SimpleDnsCrypt/zipball/master" class="btn">Download .zip (Source)</a>
       <a href="https://github.com/bitbeans/SimpleDnsCrypt/tarball/master" class="btn">Download .tar.gz (Source)</a>
       <br/>
-      Current Simple DNSCrypt version: <strong>0.2.7</strong>
+      Current Simple DNSCrypt version: <strong>0.2.8</strong>
     </section>
 
     <section class="main-content">
@@ -40,13 +40,12 @@ The dnscrypt-proxy software is written and maintained by Frank Denis (<a href="h
 <ul>
 <li>Secondary resolver support (soon available) - see <a href="https://github.com/bitbeans/SimpleDnsCrypt/issues/3">#3</a></li>
 <li>IPv6 support - see <a href="https://github.com/bitbeans/SimpleDnsCrypt/issues/1">#1</a></li>
-<li>Custom ports - see <a href="https://github.com/bitbeans/SimpleDnsCrypt/issues/7">#7</a></li>
 </ul>
 
 <h3>
 <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h3>
 
-<p>To install Simple DNSCrypt use the <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/download/0.2.7/SimpleDNSCrypt.msi">latest MSI package</a>.
+<p>To install Simple DNSCrypt use the <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/download/0.2.8/SimpleDNSCrypt.msi">latest MSI package</a>.
 You don`t need to download the dnscrypt-resolvers.csv or the dnscrypt-proxy package at all.
 Both are included in the msi package, the dnscrypt-resolvers.csv can be updated from inside the software (and will be verified with minisign).</p>
 
@@ -57,7 +56,7 @@ Both are included in the msi package, the dnscrypt-resolvers.csv can be updated 
 The files are signed under the name: <em>EAM Experience Area Münsingen GmbH</em></p>
 
 <p>You also can verify the MSI package with <a href="https://jedisct1.github.io/minisign/">minisign</a>.
-The minisign <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/download/0.2.7/SimpleDNSCrypt.msi.minisig">signature</a> can be verified with the following command:</p>
+The minisign <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/download/0.2.8/SimpleDNSCrypt.msi.minisig">signature</a> can be verified with the following command:</p>
 
 <pre><code>minisign -Vm SimpleDNSCrypt.msi -P RWTSM+4BNNvkZPNkHgE88ETlhWa+0HDzU5CN8TvbyvmhVUcr6aQXfssV
 </code></pre>
@@ -65,7 +64,7 @@ The minisign <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/downlo
 <h4>
 <a id="uninstall" class="anchor" href="#uninstall" aria-hidden="true"><span class="octicon octicon-link"></span></a>Uninstall</h4>
 
-<p>To uninstall Simple DNSCrypt and dnscrypt-proxy, just go to the windows Control Panel (Programs and Features) and search for Simple DNSCrypt.</p>
+<p>To uninstall Simple DNSCrypt and dnscrypt-proxy, just go to the Windows Control Panel (Programs and Features) and search for Simple DNSCrypt.</p>
 
 <h4>
 <a id="updates" class="anchor" href="#updates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Updates</h4>
@@ -95,7 +94,7 @@ The minisign <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/downlo
 
 <p>If your network doesn't support IPv6, chances are that your applications are still constantly trying to resolve IPv6 addresses, causing unnecessary slowdowns.
 
-This plugin causes the proxy to immediately reply to IPv6 requests, without having to send a useless request to upstream resolvers, and having to wait for a response.</p>
+This plugin causes the proxy reply immediately to to IPv6 requests, without having to send a useless request to upstream resolvers, and having to wait for a response.</p>
 
 <p><b>libdcplugin_logging</b></p>
 
@@ -146,12 +145,13 @@ This plugin causes the proxy to immediately reply to IPv6 requests, without havi
 <p>SimpleDNSCrypt currently speaks the following languages:</p>
 
 <ul>
-<li>english</li>
-<li>german</li>
-<li>indonesia (@christantoan)</li>
+<li>Dutch (Tim Tyteca)</li>
+<li>English</li>
+<li>German</li>
+<li>Indonesia (@christantoan)</li>
 </ul>
 
-<p>If you are able to translate the the resx files into more languages, please feel free to send a pull request. </p>
+<p>If you are able to translate the resx files into more languages, please feel free to send a pull request. </p>
 
 <h3>
 <a id="alternative-software" class="anchor" href="#alternative-software" aria-hidden="true"><span class="octicon octicon-link"></span></a>Alternative Software</h3>
