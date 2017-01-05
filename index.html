@@ -20,7 +20,7 @@
       <a href="https://github.com/bitbeans/SimpleDnsCrypt/zipball/master" class="btn">Download .zip (Source)</a>
       <a href="https://github.com/bitbeans/SimpleDnsCrypt/tarball/master" class="btn">Download .tar.gz (Source)</a>
       <br/>
-      Current Simple DNSCrypt version: <strong>0.3.9</strong> (with dnscrypt-proxy 1.9.1)
+      Current Simple DNSCrypt version: <strong>0.4.0</strong> (with dnscrypt-proxy 1.9.1)
     </section>
 
     <section class="main-content">
@@ -44,7 +44,7 @@ The dnscrypt-proxy software is written and maintained by Frank Denis (<a href="h
 <h3>
 <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h3>
 
-<p>To install Simple DNSCrypt use the <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/download/0.3.9/SimpleDNSCrypt.msi">latest MSI package</a>.
+<p>To install Simple DNSCrypt use the <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/download/0.4.0/SimpleDNSCrypt.msi">latest MSI package</a>.
 You don`t need to download the dnscrypt-resolvers.csv or the dnscrypt-proxy package at all.
 Both are included in the msi package, the dnscrypt-resolvers.csv can be updated from inside the software (and will be verified with minisign).</p>
 
@@ -55,7 +55,7 @@ Both are included in the msi package, the dnscrypt-resolvers.csv can be updated 
 The files are signed under the name: <em>EAM Experience Area Münsingen GmbH</em></p>
 
 <p>You also can verify the MSI package with <a href="https://jedisct1.github.io/minisign/">minisign</a>.
-The minisign <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/download/0.3.9/SimpleDNSCrypt.msi.minisig">signature</a> can be verified with the following command:</p>
+The minisign <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/download/0.4.0/SimpleDNSCrypt.msi.minisig">signature</a> can be verified with the following command:</p>
 
 <pre><code>minisign -Vm SimpleDNSCrypt.msi -P RWTSM+4BNNvkZPNkHgE88ETlhWa+0HDzU5CN8TvbyvmhVUcr6aQXfssV
 </code></pre>
@@ -92,7 +92,13 @@ The minisign <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/downlo
 
 <p><img src="https://raw.githubusercontent.com/bitbeans/SimpleDnsCrypt/master/img/plugins.png" alt="plugin view"></p>
 
-<p>Simple DNSCrypt currently supports two plugins:</p>
+<h4>
+<a id="livelog-settings" class="anchor" href="#livelog-settings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Live Log</h4>
+
+<p><img src="https://raw.githubusercontent.com/bitbeans/SimpleDnsCrypt/master/img/livelog.png" alt="Live Log view"></p>
+
+      
+<p>Simple DNSCrypt currently supports four plugins:</p>
 
 <p><b>libdcplugin_ldns_aaaa_blocking</b></p>
 
@@ -165,7 +171,7 @@ IPv4 and IPv6 addresses are supported. For names, leading and trailing wildcards
 <h3>
 <a id="translations" class="anchor" href="#translations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Translations</h3>
 
-<p>SimpleDNSCrypt currently speaks the following languages (12):</p>
+<p>SimpleDNSCrypt currently speaks the following languages (13):</p>
 
 <ul>
 <li>Danish (@simonclausen)</li>
@@ -175,9 +181,10 @@ IPv4 and IPv6 addresses are supported. For names, leading and trailing wildcards
 <li>German</li>
 <li>Italian (@ShellAddicted)</li>
 <li>Indonesian (@christantoan)</li>
+<li>Persian/Farsi (@robin98)</li>
 <li>Russian (Vlad)</li>
 <li>Simplified Chinese (@jerryhou85)</li>
-<li>Spanish (@bcien)</li>
+<li>Spanish (@bcien) (@pablomh)</li>
 <li>Swedish (@eson57)</li>
 <li>Turkish (@emirgian)</li>
 </ul>
