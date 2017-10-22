@@ -15,14 +15,16 @@
       <h1 class="project-name"><img alt="Simple DNSCrypt" src="https://raw.githubusercontent.com/bitbeans/SimpleDnsCrypt/master/img/simplednscrypt_256.png"/></h1>
       <h2 class="project-name">Simple DNSCrypt</h2>
       <h3 class="project-tagline">A simple management tool for dnscrypt-proxy</h3>
-      <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/download/0.4.2/SimpleDNSCrypt.msi" class="btn">Download .msi (Installer)</a>
+      <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/download/0.4.3/SimpleDNSCrypt.msi" class="btn">Download .msi (x86 Installer)</a>
+      <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/download/0.4.3/SimpleDNSCrypt64.msi" class="btn">Download .msi (x64 Installer)</a>
       <a href="https://github.com/bitbeans/SimpleDnsCrypt" class="btn">View on GitHub</a>
       <a href="https://github.com/bitbeans/SimpleDnsCrypt/zipball/master" class="btn">Download .zip (Source)</a>
       <a href="https://github.com/bitbeans/SimpleDnsCrypt/tarball/master" class="btn">Download .tar.gz (Source)</a>
       <br/>
-      Current Simple DNSCrypt version: <strong>0.4.2</strong> (with dnscrypt-proxy 1.9.4)<br><br>
+      Current Simple DNSCrypt version: <strong>0.4.3</strong> (with dnscrypt-proxy 1.9.5)<br><br>
       <a href="https://github.com/bitbeans/SimpleDnsCrypt/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/bitbeans/SimpleDnsCrypt.svg?style=flat-square" alt="license"></a>&nbsp;
       <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/latest"><img src="https://img.shields.io/github/release/bitbeans/SimpleDnsCrypt.svg?style=flat-square" alt="release"></a>
+      <a href="https://dnscrypt.org"><img src="https://img.shields.io/badge/dnscrypt--proxy-1.9.5-orange.svg?style=flat-square" alt="release"></a>
       <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/latest"><img src="https://img.shields.io/github/downloads/bitbeans/SimpleDnsCrypt/total.svg?style=flat-square" alt="downloads"></a>
       <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=c.hermann@bitbeans.de&item_name=Donation+to+the+Simple+DNSCrypt+project"><img src="https://img.shields.io/badge/donate-PayPal-green.svg?style=flat-square" alt="donate paypal"></a>
       <a href="https://pledgie.com/campaigns/32588"><img src="https://img.shields.io/badge/donate-pledgie-green.svg?style=flat-square" alt="donate plegie"></a>
@@ -44,13 +46,13 @@ The dnscrypt-proxy software is written and maintained by Frank Denis (<a href="h
 <p>Missing features:</p>
 
 <ul>
-<li>IPv6 support - see <a href="https://github.com/bitbeans/SimpleDnsCrypt/issues/1">#1</a></li>
+<li>IPv6 support can be enabled: <a href="https://github.com/bitbeans/SimpleDnsCrypt/issues/1#issuecomment-329471198">#1</a></li>
 </ul>
 
 <h3>
 <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h3>
 
-<p>To install Simple DNSCrypt use the <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/download/0.4.2/SimpleDNSCrypt.msi">latest MSI package</a>.
+<p>To install Simple DNSCrypt use the latest MSI packages: <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/download/0.4.3/SimpleDNSCrypt.msi">x86</a> or <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/download/0.4.3/SimpleDNSCrypt64.msi">x64</a>.
 You don`t need to download the dnscrypt-resolvers.csv or the dnscrypt-proxy package at all.
 Both are included in the msi package, the dnscrypt-resolvers.csv can be updated from inside the software (and will be verified with minisign).</p>
 
@@ -61,7 +63,7 @@ Both are included in the msi package, the dnscrypt-resolvers.csv can be updated 
 The files are signed under the name: <em>EAM Experience Area Münsingen GmbH</em></p>
 
 <p>You also can verify the MSI package with <a href="https://jedisct1.github.io/minisign/">minisign</a>.
-The minisign <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/download/0.4.2/SimpleDNSCrypt.msi.minisig">signature</a> can be verified with the following command:</p>
+The minisign signatures <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/download/0.4.3/SimpleDNSCrypt.msi.minisig">x86</a> and <a href="https://github.com/bitbeans/SimpleDnsCrypt/releases/download/0.4.3/SimpleDNSCrypt64.msi.minisig">x64</a> can be verified with the following command:</p>
 
 <pre><code>minisign -Vm SimpleDNSCrypt.msi -P RWTSM+4BNNvkZPNkHgE88ETlhWa+0HDzU5CN8TvbyvmhVUcr6aQXfssV
 </code></pre>
@@ -135,6 +137,11 @@ IPv4 and IPv6 addresses are supported. For names, leading and trailing wildcards
 </p>
 <p><b>Note:</b> If the file(s) is/are empty, the service may <b>not</b> start!</p>
 
+ <p><b>libdcplugin_ldns_forwarding</b></p>     
+
+<p>This plugin redirects queries for specific zones to a set of non-DNSCrypt resolvers. This can be useful for private zones that can only be resolved by a local DNS server.</p>
+<br>
+<p><b>Note:</b> Requests are synchronous, so this plugin should not be enabled with untrusted clients.</p> 
 
 
 <h3>
@@ -175,14 +182,14 @@ IPv4 and IPv6 addresses are supported. For names, leading and trailing wildcards
 <a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h3>
 
 <ul>
-<li>This software targets .NET 4.6.</li>
-<li>It also requires Visual C++ Redistributable for Visual Studio 2015 x86.</li>
+<li>This software targets .NET 4.6.2.</li>
+<li>It also requires Microsoft Visual C++ Redistributable für Visual Studio 2017: <a href="https://go.microsoft.com/fwlink/?LinkId=746572">x64</a> and <a href="https://go.microsoft.com/fwlink/?LinkId=746571">x86</a></li>
 </ul>
 
 <h3>
 <a id="translations" class="anchor" href="#translations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Translations</h3>
 
-<p>SimpleDNSCrypt currently speaks the following languages (14):</p>
+<p>SimpleDNSCrypt currently speaks the following languages (16):</p>
 
 <ul>
 <li>Bulgarian (@rddim)</li>
@@ -193,11 +200,13 @@ IPv4 and IPv6 addresses are supported. For names, leading and trailing wildcards
 <li>German</li>
 <li>Italian (@ShellAddicted)</li>
 <li>Indonesian (@christantoan)</li>
+<li>Norwegian (@niikoo)</li>
 <li>Persian/Farsi (@robin98)</li>
 <li>Russian (Vlad)</li>
 <li>Simplified Chinese (@jerryhou85)</li>
 <li>Spanish (@bcien) (@pablomh)</li>
 <li>Swedish (@eson57)</li>
+<li>Traditional Chinese (@porsche613)</li>
 <li>Turkish (@emirgian)</li>
 </ul>
 
