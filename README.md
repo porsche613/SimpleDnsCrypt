@@ -1,5 +1,7 @@
 # ![Alt text](img/icons/64x64.png "Simple DNSCrypt") Simple DNSCrypt
 
+Attention: this is an archive of SimpleDNSCrypt v0.4.4, which use DNSCrypt-proxy v1 (1.9.5, [archive](https://github.com/dyne/dnscrypt-proxy)) as backend. A new version which use DNSCrypt-proxy v2 as backend is avalible in original repository: https://github.com/bitbeans/SimpleDnsCrypt.
+
 [![license](https://img.shields.io/github/license/bitbeans/SimpleDnsCrypt.svg?style=flat-square)](https://github.com/bitbeans/SimpleDnsCrypt/blob/master/LICENSE.md) [![Github All Releases](https://img.shields.io/github/release/bitbeans/SimpleDnsCrypt.svg?style=flat-square)](https://github.com/bitbeans/SimpleDnsCrypt/releases/latest) [![dnscrypt--proxy](https://img.shields.io/badge/dnscrypt--proxy-1.9.5-orange.svg?style=flat-square)](https://dnscrypt.org/) [![Github All Releases](https://img.shields.io/github/downloads/bitbeans/SimpleDnsCrypt/total.svg?style=flat-square)](https://github.com/bitbeans/SimpleDnsCrypt/releases/latest) [![donate PayPal](https://img.shields.io/badge/donate-PayPal-green.svg?style=flat-square)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=c.hermann@bitbeans.de&item_name=Donation+to+the+Simple+DNSCrypt+project) [![donate pledgie](https://img.shields.io/badge/donate-pledgie-green.svg?style=flat-square)](https://pledgie.com/campaigns/32588)
 
 Simple DNSCrypt is a simple management tool to configure dnscrypt-proxy on windows based systems.
